@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Lịch học</title>
+  <link rel="stylesheet" href="../css/tkb.css">
+</head>
+<body class="bg-gray-50 min-h-screen">
+
+  <div class="container mx-auto px-4 py-6">
+    
+    <!-- Header -->
+    <header class="mb-6">
+      <h1 class="text-3xl font-bold text-navy-800">Lịch học</h1>
+      <p class="text-gray-600">Xem lịch học theo tuần</p>
+    </header>
+
+    <!-- Week Navigation -->
+    <div class="bg-white rounded-lg shadow-sm p-4 mb-6 flex items-center justify-center gap-4">
+      <button class="flex items-center justify-center p-2 rounded-full hover:bg-gray-100">
+        <span>&larr;</span>
+      </button>
+      <div class="flex items-center font-medium text-navy-800">
+        <span>22/04 - 26/04</span>
+      </div>
+      <button class="flex items-center justify-center p-2 rounded-full hover:bg-gray-100">
+        <span>&rarr;</span>
+      </button>
+    </div>
+
+    <!-- Timetable -->
+    <div class="bg-white rounded-lg shadow-lg overflow-x-auto">
+      <table class="w-full border-collapse">
+        <thead>
+          <tr class="bg-navy-700 text-white">
+            <th class="p-3 border-r border-navy-600">Giờ</th>
+            <th class="p-3 border-r border-navy-600">Thứ 2</th>
+            <th class="p-3 border-r border-navy-600">Thứ 3</th>
+            <th class="p-3 border-r border-navy-600">Thứ 4</th>
+            <th class="p-3 border-r border-navy-600">Thứ 5</th>
+            <th class="p-3">Thứ 6</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-gray-50">
+            <td class="border border-gray-200 p-2 text-center">Tiết 1</td>
+            <td class="border border-gray-200 p-0" rowspan="2">
+              <div class="p-2 h-full border-l-4 bg-navy-100 border-navy-400 text-navy-800 cursor-pointer transition-all hover:shadow-md">
+                <div class="font-medium">Lập trình web</div>
+                <div class="text-xs mt-1">Phòng: A303</div>
+              </div>
+            </td>
+            <td class="border border-gray-200"></td>
+            <td class="border border-gray-200"></td>
+            <td class="border border-gray-200"></td>
+            <td class="border border-gray-200"></td>
+          </tr>
+          <tr>
+            <td class="border border-gray-200 p-2 text-center">Tiết 2</td>
+            <td class="border border-gray-200"></td>
+            <td class="border border-gray-200"></td>
+            <td class="border border-gray-200"></td>
+            <td class="border border-gray-200"></td>
+          </tr>
+          <!-- Thêm các dòng tiết tiếp theo tương tự -->
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</body>
+</html>

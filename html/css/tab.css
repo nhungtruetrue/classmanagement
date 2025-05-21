@@ -1,0 +1,36 @@
+.tab-bar {
+    display: flex;
+    overflow: hidden;
+    width: fit-content;
+  }
+  
+  .tab-item {
+    padding: 10px 20px;
+    margin-right: 5px;
+    background: transparent; /* Không có màu nền */
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: normal;
+    text-decoration: none; /* Bình thường không gạch chân */
+    color: black; /* Mặc định màu chữ */
+  }
+  
+  .tab-item:hover {
+    background: #ddd; /* Hover nhẹ để người dùng biết */
+  }
+  
+  .tab-item.active {
+    color: navy;
+    font-weight: bold;
+    text-decoration: underline; /* Gạch chân khi active */
+    background: transparent; /* Không đổi màu nền khi active */
+  }
+  
+  .separator {
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin: 10px 0 20px 0; /* Khoảng cách trên dưới */
+  }
+  

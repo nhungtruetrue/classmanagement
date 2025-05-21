@@ -1,0 +1,73 @@
+.updateCourse {
+    width: 800px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    box-sizing: border-box;
+  }
+  
+  .updateCourse h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 24px;
+    color: navy;
+  }
+  
+  .updateCourse label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .updateCourse input,
+  .updateCourse select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  
+  .updateCourse input:focus,
+  .updateCourse select:focus {
+    border-color: navy;
+    outline: none;
+  }
+  
+  .updateCourse .action {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .updateCourse .action button:first-child {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .updateCourse .action button:last-child {
+    background-color: #f11b1b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .updateCourse .action button:hover {
+    background-color: #002d7a;
+  }
+  

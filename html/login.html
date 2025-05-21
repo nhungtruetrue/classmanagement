@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đăng nhập</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom Font -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-[#f8f6f4] min-h-screen flex flex-col">
+
+  <header class="flex items-center justify-between bg-white shadow px-4 py-3">
+    <div class="text-2xl cursor-pointer" onclick="toggleSidebar()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="text-xl font-semibold text-gray-800">Trường Đại học ABC</div>
+    <div class="w-10 h-10 rounded-full overflow-hidden">
+      <img src="https://i.pravatar.cc/40" alt="Avatar" class="w-full h-full object-cover">
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+  <aside id="sidebar" class="fixed top-0 left-0 h-full bg-white shadow w-60 transform -translate-x-full transition-transform duration-300 z-50">
+    <ul class="mt-20 space-y-4 px-6">
+      <li><a href="#" class="block text-gray-700 hover:text-blue-600">Chính sách</a></li>
+      <li><a href="#" class="block text-gray-700 hover:text-blue-600">Giới thiệu</a></li>
+      <li><a href="#" class="block text-gray-700 hover:text-blue-600">FAQ</a></li>
+    </ul>
+  </aside>
+
+  <!-- Login Form -->
+  <main class="flex-grow flex justify-center items-center">
+    <div class="bg-white p-10 rounded-2xl shadow-lg w-full max-w-md mt-10">
+      <h2 class="text-3xl font-bold text-center text-blue-900 mb-6">Đăng nhập</h2>
+      <form>
+        <div class="mb-5">
+          <label for="email" class="block text-blue-900 text-sm mb-2">Email</label>
+          <input type="email" id="email" placeholder="Nhập email"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm" />
+        </div>
+
+        <div class="mb-5">
+          <label for="password" class="block text-blue-900 text-sm mb-2">Mật khẩu</label>
+          <div class="relative">
+            <input type="password" id="password" placeholder="Nhập mật khẩu"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg pr-10 text-sm" />
+            <span class="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-[#a67c52] text-lg"
+              onclick="togglePassword()">
+              <i class="fa-regular fa-eye"></i>
+            </span>
+          </div>
+        </div>
+
+        <div class="text-right mb-5">
+          <a href="#" class="text-[#a67c52] text-sm hover:text-[#865c36]">Quên mật khẩu?</a>
+        </div>
+
+        <button type="submit"
+          class="w-full py-3 bg-blue-900 text-white rounded-lg text-base font-semibold hover:bg-[#081836] transition">
+          Đăng nhập
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('-translate-x-full');
+    }
+
+    function togglePassword() {
+      const passwordInput = document.getElementById('password');
+      const toggleIcon = document.querySelector('.fa-eye, .fa-eye-slash');
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        toggleIcon.classList.remove('fa-eye');
+        toggleIcon.classList.add('fa-eye-slash');
+      } else {
+        passwordInput.type = 'password';
+        toggleIcon.classList.remove('fa-eye-slash');
+        toggleIcon.classList.add('fa-eye');
+      }
+    }
+  </script>
+</body>
+</html>

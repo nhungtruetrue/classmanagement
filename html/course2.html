@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý khóa học</title>
+
+  <link rel="stylesheet" href="css/student.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/subject.css">
+  <link rel="stylesheet" href="css/tab.css">
+  <link rel="stylesheet" href="css/updateCourse.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  
+</head>
+
+<body>
+
+<header class="header">
+  <div class="menu-icon" onclick="toggleSidebar()">
+    <i class="fas fa-bars"></i>
+  </div>
+  <div class="logo">Trường Đại học ABC</div>
+  <div class="profile-pic">
+    <img src="https://i.pravatar.cc/100?img=5" alt="Avatar">
+  </div>
+  
+</header>
+
+<aside class="sidebar" id="sidebar">
+  <ul>
+    <li><a href="#">Chính sách</a></li>
+    <li><a href="#">Giới thiệu</a></li>
+    <li><a href="#">FAQ</a></li>
+  </ul>
+</aside>
+
+<div class="container">
+  <div class="page-header">
+      <h2>Quản lý khóa học/HKI</h2>
+  </div>
+
+  <div class="tab-bar">
+    <div class="tab-item">Quản lý lớp học</div>
+    <div class="tab-item active">Thông tin chung</div>
+  </div>
+  
+  <div class="separator"></div> 
+  <div class="updateCourse">
+    <div class="modal-content">
+      <h3>Chỉnh sửa thông tin khóa học</h3>
+  
+      <label for="courseName">Tên khóa học</label>
+      <input type="text" id="courseName" placeholder="Nhập tên khóa học">
+  
+      <label for="startDate">Ngày bắt đầu</label>
+      <input type="date" id="startDate">
+  
+      <label for="endDate">Ngày kết thúc</label>
+      <input type="date" id="endDate">
+  
+      <label for="courseStatusSwitch">Trạng thái khóa học</label>
+      <div class="switch-container">
+        <label class="switch">
+          <input type="checkbox" id="courseStatusSwitch" onchange="updateCourseStatus()">
+          <span class="slider round"></span>
+        </label>
+        <span id="courseStatusLabel">Mở đăng ký</span>
+      </div>
+       
+      
+  
+      <div class="action">
+        <button onclick="updateCourse()">Cập nhật</button>
+        <button onclick="closeModal()">Hủy</button>
+      </div>
+    </div>
+  </div>
+
+
+  
+</body>
+</html>

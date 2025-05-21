@@ -1,0 +1,93 @@
+.modal {
+    display: none;
+    position: fixed;
+    top: 70px; /* Cách lề trên */
+    left: 0;
+    width: 100%;
+    height: calc(100% - 70px);
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 9999;
+  }
+  
+  .modal-content {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 30px;
+    width: 600px;
+    height: 400px; 
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    animation: slideDown 0.4s ease;
+    overflow-y: auto; 
+  }
+  
+  .modal-content h3 {
+    grid-column: span 2;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 30px;
+    color: navy;
+  }
+
+  .modal-content input,
+  .modal-content select,
+  .modal-content textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .action {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .action button {
+    padding: 8px 24px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    min-width: 100px;
+  }
+  
+  .action button:first-child {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .action button:last-child {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  @keyframes slideDown {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .modal-content {
+      grid-template-columns: 1fr;
+      width: 90%;
+      height: auto;
+    }
+  }
+  
