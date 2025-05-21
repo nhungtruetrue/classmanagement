@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo json_encode(['success' => false, 'error' => 'Email đã tồn tại.']);
         exit;
     }
-    
+    // truêtruee
 
     // Mã hóa mật khẩu
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
